@@ -1,0 +1,18 @@
+development:
+  database:
+    host: localhost
+    user: ''
+    _secure_password: IzyVBeFCYpEn7GOKxnQ5U7t8x7iq8k84yKhPZqQl0l8qNZo5E0giHHKdT1GS27WRiU0358j3+zLJ/GqNspCvkKXgfUFlEsOB2d85tIklL/SGsXkseNhW3h8afWxBVSkwJckFeQ5b73F/+mHgaGz5Dixo4/qwBdMNas/WYx0cGnW2jTnusNe8H/EDZQP5uHU2rHDrI3c+AWIHBQ5uoT4I+OV/O7C4Fu7rpp4PTqrntr7xoUdpNHMBIBXzfaga1qoloDPkbsipqQJkH7+4OG8GB1QvijJntmyw91pBy5x7gKmYT4FlZFlCnYNwj8V2NrRlJmJvMIdf7q3W7QbVxSIQVw==
+
+
+test:
+  database:
+    host: localhost
+    user: ''
+    _secure_password: xdRRKKZn7+nyYHOb37ZSXxDxelMszFgfI1gt79eLGELNNHBNzbJRlPsmvLCo1eCpQnJE306FHZNJnjQLwAbOTnYb5LnX3yJaAW8E07PkDnMsJUtev4Y9IpgNJBVTYVKE68o6ueAEKn6ZO4okcQzTVHWKI2eKHwlhVyHm+7IGeztto/QrxlZDtulGShNAk1KY/cgyDfPyEUqnGgVxhY03dqE/9GZOt6BEH35SJRvG6+5BWfWCWp48Cg76B2StWFiuCyUdxtYBFGjQOwot2rEUF6ig2VCVLo5tqjpR+qI7BtMP4DbLEi7hVdJDSmztu4b+3I6gIwE6+iaojy6RryKQ+g==
+
+production:
+  database:
+    host: localhost
+    user: ''
+    _secure_password: hfPEDrwd7GkNQZOX8kFF4b2WT2M0iD81RzksbJCUHds/YzXmOyT6VUFqHgto8iy9B4OHgJs/y195dpf5HwGCTTyLPaDjOyNbkoegPxsrARXj9v10ygAD3DHrt8tkfT0bar/EBvIJrih4Kk3O/GrV/ldE0exMvV/WdbhtbpkjWdN1vVLSyPhMNIK/1GNg0J+x8pTNElUln87bdTJsdpi7kNUrZ+3PX7PDZ1tCsLAybnhjZCZT1oU5lKcWseHI4v/wNCSTxiAey7KtO4D5YTLuAO8ULGuzLpPBNVu+ojFAiFWml8oS7kMcfiubAUTVJbx6QlGdr2vziIjVLVCW2ZZb1A==
