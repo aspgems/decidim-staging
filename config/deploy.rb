@@ -34,6 +34,5 @@ set :assets_dir, %w(public/assets)
 # if you want to work on a specific local environment (default = ENV['RAILS_ENV'] || 'development')
 set :locals_rails_env, "development"
 
-namespace :deploy do
-  before :finished, 'deploy:sitemap:refresh'
+namespace :deploy do  
 end
