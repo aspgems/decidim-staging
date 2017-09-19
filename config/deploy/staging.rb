@@ -4,15 +4,13 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :app, %w(xxx.aspgems.com)
-role :web, %w(xxx.aspgems.com)
-role :db,  %w(xxx.aspgems.com)
-role :sidekiq, %w(xxx.aspgems.com)
+role :app, %w(kup.aspgems.com)
+role :web, %w(kup.aspgems.com)
+role :db,  %w(kup.aspgems.com)
 
-set :app_env, 'xxx'     # Name used in rollbar/hipchat, etc
+set :app_env, 'master'     # Name used in rollbar/hipchat, etc
 set :branch,   fetch(:app_env)  # Git branch deployed
 set :instance, fetch(:branch)   # Deploy extra files from script/deploy/<instance>
-set :newrelic_deploy_user, 'xxx'
 
 # Extended Server Syntax
 # ======================

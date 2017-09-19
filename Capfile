@@ -26,7 +26,6 @@ require 'capistrano/deploy'
 
 require 'capistrano/rails'
 require 'hipchat/capistrano'
-require 'capistrano/sidekiq'
 require 'capistrano-db-tasks'
 require 'airbrussh/capistrano'
 
