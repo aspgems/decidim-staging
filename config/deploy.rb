@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
 lock '3.3.5'
 
-set :client, 'aspgems'
-set :application, 'neurok'
+set :client, 'xxx'
+set :application, 'xxx'
 set :user, 'barcelonadecidim'
-set :repo_url, "git@gitlab.com:neurok/neurok.git"
+set :repo_url, "xxx"
 
 set :deploy_to, -> { "/home/#{fetch(:user)}/app" }
 set :keep_releases, 5
