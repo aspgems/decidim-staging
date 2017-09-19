@@ -30,6 +30,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-faster-assets', '~> 1.0'
   gem 'capistrano-db-tasks', require: false
+  gem 'capistrano-bundler', '~> 1.2'
   gem 'airbrussh', require: false
 end
 
