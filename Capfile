@@ -25,10 +25,8 @@ require 'capistrano/deploy'
 # require 'capistrano/passenger'
 
 require 'capistrano/rails'
-require 'hipchat/capistrano'
 require 'capistrano-db-tasks'
 require 'airbrussh/capistrano'
-
 
 # Load custom tasks from `lib/capistrano/tasks' if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
