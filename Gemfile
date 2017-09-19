@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.4.0"
+ruby "2.4.1"
 
 gem 'chamber', '~> 2.10.1'
 gem "decidim"
@@ -29,7 +29,7 @@ group :development do
   gem 'capistrano', '~> 3.3.5'
   gem 'capistrano-rails'
   gem 'capistrano-faster-assets', '~> 1.0'
-  gem 'capistrano-db-tasks', require: false  
+  gem 'capistrano-db-tasks', require: false
   gem 'airbrussh', require: false
 end
 
