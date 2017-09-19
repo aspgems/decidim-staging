@@ -46,6 +46,8 @@ bower.json
 # Ignore public uploads
 public/uploads
 
+.capistrano
+
 # Private and protected key files for Chamber
 .chamber.pem
 .chamber.pem.enc

@@ -18,9 +18,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: <%= Chamber.env.database.host %>
-  username: <%= Chamber.env.database.user %>
-  password: <%= Chamber.env.database.password %>
+  host: localhost
+  username: ""
+  password: ""
 
 development:
   <<: *default
