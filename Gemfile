@@ -4,7 +4,7 @@ ruby "2.4.1"
 
 gem 'chamber', '~> 2.10.1'
 gem "decidim"
-gem 'decidim-initiatives', '0.0.2', git: 'https://github.com/decidim/decidim-initiatives.git'
+gem 'decidim-initiatives', '~> 0.0.2', git: 'https://github.com/decidim/decidim-initiatives.git'
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 # gem "decidim-assemblies", path: ".."

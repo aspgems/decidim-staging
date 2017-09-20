@@ -34,5 +34,10 @@ set :assets_dir, %w(public/assets)
 # if you want to work on a specific local environment (default = ENV['RAILS_ENV'] || 'development')
 set :locals_rails_env, "development"
 
-namespace :deploy do  
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
 end
