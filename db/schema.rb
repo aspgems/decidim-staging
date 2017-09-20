@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919123639) do
+ActiveRecord::Schema.define(version: 20170920073546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -191,6 +191,55 @@ ActiveRecord::Schema.define(version: 20170919123639) do
     t.datetime "updated_at", null: false
     t.index ["decidim_admin_id"], name: "index_decidim_impersonation_logs_on_decidim_admin_id"
     t.index ["decidim_user_id"], name: "index_decidim_impersonation_logs_on_decidim_user_id"
+  end
+
+  create_table "decidim_initiatives", force: :cascade do |t|
+    t.jsonb "title", null: false
+    t.jsonb "description", null: false
+    t.integer "decidim_organization_id"
+    t.bigint "decidim_author_id"
+    t.string "banner_image"
+    t.datetime "published_at"
+    t.integer "decidim_scope_id"
+    t.bigint "type_id"
+    t.integer "state", default: 0, null: false
+    t.integer "signature_type", default: 0, null: false
+    t.date "signature_start_time", null: false
+    t.date "signature_end_time", null: false
+    t.jsonb "answer"
+    t.datetime "answered_at"
+    t.string "answer_url"
+    t.integer "initiative_votes_count", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answered_at"], name: "index_decidim_initiatives_on_answered_at"
+    t.index ["decidim_author_id"], name: "index_decidim_initiatives_on_decidim_author_id"
+    t.index ["decidim_organization_id"], name: "index_decidim_initiatives_on_decidim_organization_id"
+    t.index ["decidim_scope_id"], name: "index_decidim_initiatives_on_decidim_scope_id"
+    t.index ["description"], name: "decidim_initiatives_description_search"
+    t.index ["published_at"], name: "index_decidim_initiatives_on_published_at"
+    t.index ["title"], name: "decidim_initiatives_title_search"
+    t.index ["type_id"], name: "index_decidim_initiatives_on_type_id"
+  end
+
+  create_table "decidim_initiatives_types", force: :cascade do |t|
+    t.jsonb "title", null: false
+    t.jsonb "description", null: false
+    t.integer "supports_required", null: false
+    t.integer "decidim_organization_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_organization_id"], name: "index_decidim_initiative_types_on_decidim_organization_id"
+  end
+
+  create_table "decidim_initiatives_votes", force: :cascade do |t|
+    t.bigint "decidim_initiative_id", null: false
+    t.bigint "decidim_author_id", null: false
+    t.integer "scope", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_author_id"], name: "index_decidim_initiatives_votes_on_decidim_author_id"
+    t.index ["decidim_initiative_id"], name: "index_decidim_initiatives_votes_on_decidim_initiative_id"
   end
 
   create_table "decidim_meetings_meetings", id: :serial, force: :cascade do |t|

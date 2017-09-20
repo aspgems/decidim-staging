@@ -12,8 +12,6 @@ set :app_env, 'master'     # Name used in rollbar/hipchat, etc
 set :branch,   fetch(:app_env)  # Git branch deployed
 set :instance, fetch(:branch)   # Deploy extra files from script/deploy/<instance>
 
-set :bundle_without, %w{development}.join(' ')  
-
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server

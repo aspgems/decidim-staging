@@ -4,6 +4,7 @@ ruby "2.4.1"
 
 gem 'chamber', '~> 2.10.1'
 gem "decidim"
+gem 'decidim-initiatives', git: 'https://github.com/decidim/decidim-initiatives.git'
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 # gem "decidim-assemblies", path: ".."
@@ -30,7 +31,6 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-faster-assets', '~> 1.0'
   gem 'capistrano-db-tasks', require: false
-  gem 'capistrano-bundler', '~> 1.2'
   gem 'airbrussh', require: false
 end
 
