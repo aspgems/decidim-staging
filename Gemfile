@@ -4,7 +4,7 @@ ruby "2.4.1"
 
 gem 'chamber', '~> 2.10.1'
 gem "decidim"
-gem 'decidim-initiatives', git: 'https://github.com/decidim/decidim-initiatives.git'
+gem 'decidim-initiatives', '0.0.1', git: 'https://github.com/decidim/decidim-initiatives.git'
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 # gem "decidim-assemblies", path: ".."
@@ -28,6 +28,7 @@ group :development do
   gem "letter_opener_web", "~> 1.3.0"
 
   gem 'capistrano', '~> 3.3.5'
+  gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-rails'
   gem 'capistrano-faster-assets', '~> 1.0'
   gem 'capistrano-db-tasks', require: false
