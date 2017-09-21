@@ -27,6 +27,7 @@ group :development do
 
   gem 'capistrano', '~> 3.3.5'
   gem 'capistrano-bundler', '~> 1.2'
+  gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-faster-assets', '~> 1.0'
   gem 'capistrano-db-tasks', require: false
