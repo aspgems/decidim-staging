@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-ruby "2.4.1"
-
 gem 'chamber', '~> 2.10.1'
 gem "decidim"
 gem 'decidim-initiatives', '~> 0.0.2', git: 'https://github.com/decidim/decidim-initiatives.git'
