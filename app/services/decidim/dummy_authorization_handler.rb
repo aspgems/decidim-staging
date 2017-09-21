@@ -21,7 +21,7 @@ module Decidim
     private
 
     def valid_document_number
-      errors.add(:document_number, :invalid) unless document_number.to_s.end_with?("X")
+      true
     end
   end
 end
