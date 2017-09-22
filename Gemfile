@@ -25,7 +25,7 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "letter_opener_web", "~> 1.3.0"
 
-  gem 'capistrano', '~> 3.3.5'
+  gem 'capistrano', '3.3.5'
   gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
