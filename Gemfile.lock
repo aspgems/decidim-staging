@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: d34b9089bb7bd48919d99b7de27667b139742be2
+  revision: 262fd6fed96e1dacd4f1f7cf280f7c8029ab6f56
   specs:
-    decidim-initiatives (0.0.3)
+    decidim-initiatives (0.0.4)
       decidim-comments
       decidim-core (>= 0.6.0, <= 0.8.0)
       kaminari (~> 1.0.1)
@@ -436,9 +436,9 @@ GEM
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
-    premailer (1.10.4)
+    premailer (1.11.0)
       addressable
-      css_parser (>= 1.4.10)
+      css_parser (>= 1.6.0)
       htmlentities (>= 4.0.0)
     premailer-rails (1.9.7)
       actionmailer (>= 3, < 6)
