@@ -24,7 +24,7 @@ default: &default
 
 development:
   <<: *default
-  database: decidim_development
+  database: decidim_staging
 
 test:
   <<: *default

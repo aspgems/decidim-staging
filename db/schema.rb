@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170921133522) do
+ActiveRecord::Schema.define(version: 20170925150024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "pg_trgm"
 
   create_table "decidim_assemblies", id: :serial, force: :cascade do |t|
     t.string "slug", null: false
@@ -221,6 +220,17 @@ ActiveRecord::Schema.define(version: 20170921133522) do
     t.index ["published_at"], name: "index_decidim_initiatives_on_published_at"
     t.index ["title"], name: "decidim_initiatives_title_search"
     t.index ["type_id"], name: "index_decidim_initiatives_on_type_id"
+  end
+
+  create_table "decidim_initiatives_committee_members", force: :cascade do |t|
+    t.bigint "decidim_initiatives_id"
+    t.bigint "decidim_users_id"
+    t.integer "state", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_initiatives_id"], name: "index_decidim_committee_members_initiative"
+    t.index ["decidim_users_id"], name: "index_decidim_committee_members_user"
+    t.index ["state"], name: "index_decidim_initiatives_committee_members_on_state"
   end
 
   create_table "decidim_initiatives_types", force: :cascade do |t|

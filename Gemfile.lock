@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: 8c2509f443bdb1aad94be3d9f86d47eae06fffc9
+  revision: 52a68e56a1a2dbdea9eeabf5a3e0337dec4ae9b4
   specs:
-    decidim-initiatives (0.0.7)
+    decidim-initiatives (0.0.8)
       decidim-comments
       decidim-core (>= 0.6.0, <= 0.8.0)
       kaminari (~> 1.0.1)
@@ -127,6 +127,7 @@ GEM
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    crass (1.0.2)
     css_parser (1.6.0)
       addressable
     database_cleaner (1.6.1)
@@ -378,7 +379,8 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.0.3)
+    loofah (2.1.1)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
