@@ -1,7 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
+gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
-gem "decidim"
+gem 'decidim'
 gem 'decidim-initiatives', '~> 0.0.2', git: 'https://github.com/decidim/decidim-initiatives.git'
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
