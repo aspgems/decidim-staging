@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925161507) do
+ActiveRecord::Schema.define(version: 20170927153928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -205,14 +205,15 @@ ActiveRecord::Schema.define(version: 20170925161507) do
     t.bigint "type_id"
     t.integer "state", default: 0, null: false
     t.integer "signature_type", default: 0, null: false
-    t.date "signature_start_time", null: false
-    t.date "signature_end_time", null: false
+    t.date "signature_start_time"
+    t.date "signature_end_time"
     t.jsonb "answer"
     t.datetime "answered_at"
     t.string "answer_url"
     t.integer "initiative_votes_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "decidim_user_group_id"
     t.index ["answered_at"], name: "index_decidim_initiatives_on_answered_at"
     t.index ["decidim_author_id"], name: "index_decidim_initiatives_on_decidim_author_id"
     t.index ["decidim_organization_id"], name: "index_decidim_initiatives_on_decidim_organization_id"
