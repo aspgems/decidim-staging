@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: fc89ea7e447e1f499a5ca5a97c60073d9efbf97a
+  revision: ef48d1e4ae09a71d5a6b69c914cb2e8888a937b7
   specs:
-    decidim-initiatives (0.0.12)
+    decidim-initiatives (0.0.13)
       decidim-comments
       decidim-core (>= 0.6.0, <= 0.8.0)
       kaminari (~> 1.0.1)
@@ -498,7 +498,7 @@ GEM
       activesupport (>= 4.1.0)
       virtus (~> 1.0.5)
       wisper (>= 1.6.1)
-    redis (3.3.3)
+    redis (3.3.5)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927153928) do
+ActiveRecord::Schema.define(version: 20170929104305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -248,9 +248,9 @@ ActiveRecord::Schema.define(version: 20170927153928) do
   create_table "decidim_initiatives_votes", force: :cascade do |t|
     t.bigint "decidim_initiative_id", null: false
     t.bigint "decidim_author_id", null: false
-    t.integer "scope", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "decidim_user_group_id"
     t.index ["decidim_author_id"], name: "index_decidim_initiatives_votes_on_decidim_author_id"
     t.index ["decidim_initiative_id"], name: "index_decidim_initiatives_votes_on_decidim_initiative_id"
   end
