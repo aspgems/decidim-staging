@@ -1,15 +1,16 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: 4590368f0dfe7a4de7feae6d0fcbc65df31b80b9
+  revision: 2f9b8b2dda6612bcbd860f481d3a675c3cf3fd8d
   specs:
-    decidim-initiatives (0.0.16)
+    decidim-initiatives (0.0.17)
+      decidim-admin
       decidim-comments
       decidim-core (>= 0.6.0, <= 0.8.0)
       kaminari (~> 1.0.1)
-      rectify (~> 0.9.1)
+      rectify
       social-share-button (~> 0.10.0)
       truncato
-      wicked (~> 1.3.2)
+      wicked
 
 GEM
   remote: https://rubygems.org/
