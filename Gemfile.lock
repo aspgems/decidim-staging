@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: 2f9b8b2dda6612bcbd860f481d3a675c3cf3fd8d
+  revision: cde01e5e6003416a5db5736ad9b90b4c926138dd
   specs:
-    decidim-initiatives (0.0.17)
+    decidim-initiatives (0.0.20)
       decidim-admin
       decidim-comments
       decidim-core (>= 0.6.0, <= 0.8.0)
@@ -67,7 +67,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (8.0.0)
     ast (2.3.0)
-    autoprefixer-rails (7.1.4.1)
+    autoprefixer-rails (7.1.5)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -301,7 +301,7 @@ GEM
       thread
       thread_safe
     equalizer (0.0.11)
-    erubi (1.6.1)
+    erubi (1.7.0)
     execjs (2.7.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
