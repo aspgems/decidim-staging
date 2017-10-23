@@ -194,13 +194,6 @@ ActiveRecord::Schema.define(version: 20171023093306) do
     t.index ["decidim_user_id"], name: "index_decidim_impersonation_logs_on_decidim_user_id"
   end
 
-  create_table "decidim_initiative_extra_data", force: :cascade do |t|
-    t.bigint "decidim_initiative_id", null: false
-    t.integer "data_type", default: 0, null: false
-    t.jsonb "data", null: false
-    t.index ["decidim_initiative_id"], name: "index_decidim_initiative_extra_data_on_decidim_initiative_id"
-  end
-
   create_table "decidim_initiatives", force: :cascade do |t|
     t.jsonb "title", null: false
     t.jsonb "description", null: false
@@ -240,6 +233,13 @@ ActiveRecord::Schema.define(version: 20171023093306) do
     t.index ["decidim_initiatives_id"], name: "index_decidim_committee_members_initiative"
     t.index ["decidim_users_id"], name: "index_decidim_committee_members_user"
     t.index ["state"], name: "index_decidim_initiatives_committee_members_on_state"
+  end
+
+  create_table "decidim_initiatives_extra_data", force: :cascade do |t|
+    t.bigint "decidim_initiative_id", null: false
+    t.integer "data_type", default: 0, null: false
+    t.jsonb "data", null: false
+    t.index ["decidim_initiative_id"], name: "index_decidim_initiatives_extra_data_on_decidim_initiative_id"
   end
 
   create_table "decidim_initiatives_type_scopes", force: :cascade do |t|
