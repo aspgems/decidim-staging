@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: 7e018968fdd7ecdb065252e5bb83d172a219b929
+  revision: ca6e15b3555450083cf4921dfad3b11c1e10e782
   specs:
-    decidim-initiatives (0.0.29)
+    decidim-initiatives (0.0.34)
       decidim-admin
       decidim-comments
       decidim-core (>= 0.6.0, <= 0.8.0)
@@ -67,7 +67,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     arel (8.0.0)
     ast (2.3.0)
-    autoprefixer-rails (7.1.5)
+    autoprefixer-rails (7.1.6)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)

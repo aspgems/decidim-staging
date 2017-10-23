@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171018094830) do
+ActiveRecord::Schema.define(version: 20171023093306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -194,6 +194,13 @@ ActiveRecord::Schema.define(version: 20171018094830) do
     t.index ["decidim_user_id"], name: "index_decidim_impersonation_logs_on_decidim_user_id"
   end
 
+  create_table "decidim_initiative_extra_data", force: :cascade do |t|
+    t.bigint "decidim_initiative_id", null: false
+    t.integer "data_type", default: 0, null: false
+    t.jsonb "data", null: false
+    t.index ["decidim_initiative_id"], name: "index_decidim_initiative_extra_data_on_decidim_initiative_id"
+  end
+
   create_table "decidim_initiatives", force: :cascade do |t|
     t.jsonb "title", null: false
     t.jsonb "description", null: false
@@ -214,6 +221,8 @@ ActiveRecord::Schema.define(version: 20171018094830) do
     t.string "hashtag"
     t.integer "initiative_supports_count", default: 0, null: false
     t.integer "scoped_type_id"
+    t.datetime "first_progress_notification_at"
+    t.datetime "second_progress_notification_at"
     t.index ["answered_at"], name: "index_decidim_initiatives_on_answered_at"
     t.index ["decidim_author_id"], name: "index_decidim_initiatives_on_decidim_author_id"
     t.index ["decidim_organization_id"], name: "index_decidim_initiatives_on_decidim_organization_id"
