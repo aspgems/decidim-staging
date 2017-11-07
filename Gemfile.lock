@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: 0ccf8326de67906330c0a17664866fb47861e2be
+  revision: 2c8e726104204f7416325f66faf201add4be91e0
   specs:
-    decidim-initiatives (0.0.47)
+    decidim-initiatives (0.0.48)
       decidim-admin
       decidim-comments
       decidim-core (>= 0.7.0, <= 0.8.0)
