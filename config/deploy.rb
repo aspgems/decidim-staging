@@ -1,6 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.3.5'
 
+set :application, 'decidim-staging'
 set :user, 'barcelonadecidim'
 set :repo_url, "https://github.com/aspgems/decidim-staging.git"
 
