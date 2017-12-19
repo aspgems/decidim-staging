@@ -15,7 +15,6 @@ services:
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=postgres
       - GEM_HOME=/gems
-      - RAILS_ENV=production
       - SSH_AUTH_SOCK=/tmp/agent.sock
     links:
       - pg
