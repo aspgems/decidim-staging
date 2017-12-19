@@ -1,17 +1,22 @@
-version: '2'
+version: '3'
 services:
-  app:
-    build:
-      context: .
-      args:
-        rails_env: development
+  decidim:
+    build: .
+    entrypoint: /code/bin/entrypoint.sh
+    command: bundle exec rails s -p 3000 -b 0.0.0.0
+    working_dir: "/code"
+    ports:
+      - "3000:3000"
     volumes:
       - .:/code
+      - gems:/gems
+      - "$SSH_AUTH_SOCK:/tmp/agent.sock"
     environment:
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=postgres
-    ports:
-      - 3000:3000
+      - GEM_HOME=/gems
+      - RAILS_ENV=production
+      - SSH_AUTH_SOCK=/tmp/agent.sock
     links:
       - pg
       - redis
@@ -24,5 +29,6 @@ services:
     volumes:
       - redis-data:/data
 volumes:
+  gems: {}
   pg-data: {}
   redis-data: {}

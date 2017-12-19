@@ -18,9 +18,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  host: localhost
-  username: ""
-  password: ""
+  host: <%= ENV.fetch("DATABASE_HOST") { "localhost" } %>
+  username: <%= ENV.fetch("DATABASE_USERNAME") { "" } %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD") { "" } %>
 
 development:
   <<: *default
@@ -31,4 +31,5 @@ test:
   database: decidim_test
 
 production:
-  url: decidim_production
+  <<: *default
+  database: decidim_production
