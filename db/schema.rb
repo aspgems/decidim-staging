@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219154730) do
+ActiveRecord::Schema.define(version: 20171220093837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -399,6 +399,21 @@ ActiveRecord::Schema.define(version: 20171219154730) do
     t.index ["report_count"], name: "decidim_moderations_report_count"
   end
 
+  create_table "decidim_module_sortitions_sortitions", force: :cascade do |t|
+    t.bigint "decidim_feature_id"
+    t.bigint "decidim_category_id"
+    t.integer "decidim_proposals_feature_id"
+    t.integer "dice", null: false
+    t.integer "target_items", null: false
+    t.datetime "request_timestamp", null: false
+    t.jsonb "selected_proposals"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_category_id"], name: "index_sortitions__on_category"
+    t.index ["decidim_feature_id"], name: "index_sortitions__on_feature"
+    t.index ["decidim_proposals_feature_id"], name: "index_sortitions__on_proposals_feature"
+  end
+
   create_table "decidim_newsletters", id: :serial, force: :cascade do |t|
     t.jsonb "subject"
     t.jsonb "body"
@@ -766,6 +781,7 @@ ActiveRecord::Schema.define(version: 20171219154730) do
   add_foreign_key "decidim_authorizations", "decidim_users"
   add_foreign_key "decidim_categorizations", "decidim_categories"
   add_foreign_key "decidim_identities", "decidim_organizations"
+  add_foreign_key "decidim_module_sortitions_sortitions", "decidim_categories"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
   add_foreign_key "decidim_participatory_processes", "decidim_organizations"
