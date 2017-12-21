@@ -16,9 +16,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-sortitions.git
-  revision: 86fbbc603f2e85ca02d0a02458721420b4a4198f
+  revision: d0a3b6dd612561211af8298fde7dc2c6af6ebf68
   specs:
-    decidim-module-sortitions (0.1.1)
+    decidim-module-sortitions (0.1.2)
       decidim-admin (~> 0.8.3)
       decidim-core (~> 0.8.3)
       rails (~> 5.1.4)
