@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221104906) do
+ActiveRecord::Schema.define(version: 20180105104358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -401,7 +401,6 @@ ActiveRecord::Schema.define(version: 20171221104906) do
 
   create_table "decidim_module_sortitions_sortitions", force: :cascade do |t|
     t.bigint "decidim_feature_id"
-    t.bigint "decidim_category_id"
     t.integer "decidim_proposals_feature_id"
     t.integer "dice", null: false
     t.integer "target_items", null: false
@@ -411,7 +410,14 @@ ActiveRecord::Schema.define(version: 20171221104906) do
     t.datetime "updated_at", null: false
     t.jsonb "witnesses"
     t.jsonb "additional_info"
-    t.index ["decidim_category_id"], name: "index_sortitions__on_category"
+    t.bigint "decidim_author_id"
+    t.string "reference"
+    t.jsonb "title"
+    t.jsonb "cancel_reason"
+    t.datetime "cancelled_on"
+    t.integer "cancelled_by_user_id"
+    t.jsonb "candidate_proposals"
+    t.index ["decidim_author_id"], name: "index_decidim_module_sortitions_sortitions_on_decidim_author_id"
     t.index ["decidim_feature_id"], name: "index_sortitions__on_feature"
     t.index ["decidim_proposals_feature_id"], name: "index_sortitions__on_proposals_feature"
   end
@@ -783,7 +789,6 @@ ActiveRecord::Schema.define(version: 20171221104906) do
   add_foreign_key "decidim_authorizations", "decidim_users"
   add_foreign_key "decidim_categorizations", "decidim_categories"
   add_foreign_key "decidim_identities", "decidim_organizations"
-  add_foreign_key "decidim_module_sortitions_sortitions", "decidim_categories"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
   add_foreign_key "decidim_participatory_processes", "decidim_organizations"
