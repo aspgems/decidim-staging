@@ -6,7 +6,7 @@ gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
 gem 'decidim', '~> 0.8.3'
 gem 'decidim-initiatives', '~> 0.2.0', git: 'https://github.com/decidim/decidim-initiatives.git'
-gem 'decidim-module-sortitions', '~> 0.1.0', git: 'https://github.com/decidim/decidim-module-sortitions.git'
+gem 'decidim-sortitions', '~> 0.2.0', git: 'https://github.com/decidim/decidim-module-sortitions.git'
 gem 'decidim-verifications'
 
 gem 'puma', '~> 3.0'

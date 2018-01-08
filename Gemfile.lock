@@ -16,9 +16,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-sortitions.git
-  revision: ad5f96cdb85d21cb22ad004ce52935bd8d834ee4
+  revision: a1460b0fe0b796076b22cf23bdcb9c729b035f38
   specs:
-    decidim-module-sortitions (0.1.7)
+    decidim-sortitions (0.2.0)
       decidim-admin (~> 0.8.3)
       decidim-core (~> 0.8.3)
       rails (~> 5.1.4)
@@ -654,7 +654,7 @@ DEPENDENCIES
   decidim (~> 0.8.3)
   decidim-dev (~> 0.8.3)
   decidim-initiatives (~> 0.2.0)!
-  decidim-module-sortitions (~> 0.1.0)!
+  decidim-sortitions (~> 0.2.0)!
   decidim-verifications
   faker (~> 1.8.4)
   letter_opener_web (~> 1.3.0)
