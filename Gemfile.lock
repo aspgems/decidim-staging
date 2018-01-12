@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/decidim/decidim-initiatives.git
-  revision: a2de7968bf5c64bb2fe562b967097342cb1d4901
+  revision: 9cac48f6a5797318a849c7fbe22ac1f1c487a323
   specs:
-    decidim-initiatives (0.2.5)
+    decidim-initiatives (0.2.7)
       decidim-admin
       decidim-comments
       decidim-core (~> 0.8.3)
@@ -13,6 +13,15 @@ GIT
       social-share-button (~> 1.0.0)
       truncato
       wicked
+
+GIT
+  remote: https://github.com/decidim/decidim-module-consultations.git
+  revision: 9c84501eb109e86fc28b298a3971b5ec72f5c37a
+  specs:
+    decidim-consultations (0.1.1)
+      decidim-admin (~> 0.8.3)
+      decidim-core (~> 0.8.3)
+      rails (~> 5.1.4)
 
 GIT
   remote: https://github.com/decidim/decidim-module-sortitions.git
@@ -406,7 +415,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.1)
-    multi_json (1.13.0)
+    multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     net-scp (1.2.1)
@@ -654,6 +663,7 @@ DEPENDENCIES
   capistrano-rails
   chamber (~> 2.10.1)
   decidim (~> 0.8.3)
+  decidim-consultations!
   decidim-dev (~> 0.8.3)
   decidim-initiatives (~> 0.2.0)!
   decidim-sortitions (~> 0.2.0)!

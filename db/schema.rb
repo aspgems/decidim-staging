@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108163718) do
+ActiveRecord::Schema.define(version: 20180112043136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -190,6 +190,28 @@ ActiveRecord::Schema.define(version: 20180108163718) do
     t.index ["decidim_author_id"], name: "decidim_comments_comment_author"
     t.index ["decidim_commentable_type", "decidim_commentable_id"], name: "decidim_comments_comment_commentable"
     t.index ["decidim_root_commentable_type", "decidim_root_commentable_id"], name: "decidim_comments_comment_root_commentable"
+  end
+
+  create_table "decidim_consultations", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "decidim_organization_id"
+    t.jsonb "title", null: false
+    t.jsonb "subtitle", null: false
+    t.jsonb "description", null: false
+    t.string "banner_image"
+    t.string "introductory_video_url"
+    t.date "start_voting_date", null: false
+    t.integer "decidim_highlighted_scope_id"
+    t.datetime "published_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_highlighted_scope_id"], name: "index_decidim_consultations_on_decidim_highlighted_scope_id"
+    t.index ["decidim_organization_id", "slug"], name: "index_unique_consultation_slug_and_organization", unique: true
+    t.index ["decidim_organization_id"], name: "index_decidim_consultations_on_decidim_organization_id"
+    t.index ["description"], name: "decidim_consultations_description_search"
+    t.index ["published_at"], name: "index_decidim_consultations_on_published_at"
+    t.index ["subtitle"], name: "decidim_consultations_subtitle_search"
+    t.index ["title"], name: "decidim_consultations_title_search"
   end
 
   create_table "decidim_features", id: :serial, force: :cascade do |t|
