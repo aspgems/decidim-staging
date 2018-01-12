@@ -16,9 +16,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-consultations.git
-  revision: 7ad0d4452a1b71ad1d8947c488c537d2a26a3a09
+  revision: d4097e9b4f6a25d0c4141c0ecd08136ae6300453
   specs:
-    decidim-consultations (0.1.3)
+    decidim-consultations (0.1.4)
       decidim-admin (~> 0.8.3)
       decidim-core (~> 0.8.3)
       rails (~> 5.1.4)
