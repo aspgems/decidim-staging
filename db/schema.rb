@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112043136) do
+ActiveRecord::Schema.define(version: 20180116102605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -205,6 +205,7 @@ ActiveRecord::Schema.define(version: 20180112043136) do
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "end_voting_date", null: false
     t.index ["decidim_highlighted_scope_id"], name: "index_decidim_consultations_on_decidim_highlighted_scope_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_consultation_slug_and_organization", unique: true
     t.index ["decidim_organization_id"], name: "index_decidim_consultations_on_decidim_organization_id"
@@ -212,6 +213,36 @@ ActiveRecord::Schema.define(version: 20180112043136) do
     t.index ["published_at"], name: "index_decidim_consultations_on_published_at"
     t.index ["subtitle"], name: "decidim_consultations_subtitle_search"
     t.index ["title"], name: "decidim_consultations_title_search"
+  end
+
+  create_table "decidim_consultations_questions", force: :cascade do |t|
+    t.bigint "decidim_consultation_id"
+    t.bigint "decidim_scope_id"
+    t.jsonb "title", null: false
+    t.jsonb "subtitle", null: false
+    t.jsonb "what_is_decided", null: false
+    t.jsonb "promoter_group", null: false
+    t.jsonb "participatory_scope", null: false
+    t.jsonb "question_context"
+    t.string "banner_image"
+    t.string "introductory_video_url"
+    t.string "reference"
+    t.string "hashtag"
+    t.datetime "published_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "decidim_organization_id", null: false
+    t.string "slug", null: false
+    t.index ["decidim_consultation_id"], name: "index_consultations_questions_on_consultation_id"
+    t.index ["decidim_organization_id", "slug"], name: "index_unique_question_slug_and_organization", unique: true
+    t.index ["decidim_scope_id"], name: "index_decidim_consultations_questions_on_decidim_scope_id"
+    t.index ["participatory_scope"], name: "consultation_question_participatory_scope_search"
+    t.index ["promoter_group"], name: "consultation_question_promoter_group_search"
+    t.index ["published_at"], name: "index_decidim_consultations_questions_on_published_at"
+    t.index ["question_context"], name: "consultation_question_context_search"
+    t.index ["subtitle"], name: "consultation_questions_subtitle_search"
+    t.index ["title"], name: "consultation_questions_title_search"
+    t.index ["what_is_decided"], name: "consultation_questions_what_is_decided_search"
   end
 
   create_table "decidim_features", id: :serial, force: :cascade do |t|
