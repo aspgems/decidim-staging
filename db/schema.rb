@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116102605) do
+ActiveRecord::Schema.define(version: 20180122143437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -233,9 +233,14 @@ ActiveRecord::Schema.define(version: 20180116102605) do
     t.datetime "updated_at", null: false
     t.integer "decidim_organization_id", null: false
     t.string "slug", null: false
+    t.jsonb "origin_scope"
+    t.jsonb "origin_title"
+    t.string "origin_url"
     t.index ["decidim_consultation_id"], name: "index_consultations_questions_on_consultation_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_question_slug_and_organization", unique: true
     t.index ["decidim_scope_id"], name: "index_decidim_consultations_questions_on_decidim_scope_id"
+    t.index ["origin_scope"], name: "consultation_questions_origin_scope_search"
+    t.index ["origin_title"], name: "consultation_questions_origin_title_search"
     t.index ["participatory_scope"], name: "consultation_question_participatory_scope_search"
     t.index ["promoter_group"], name: "consultation_question_promoter_group_search"
     t.index ["published_at"], name: "index_decidim_consultations_questions_on_published_at"
