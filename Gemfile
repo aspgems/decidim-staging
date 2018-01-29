@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
 gem 'decidim', git: "https://github.com/decidim/decidim"
-gem 'decidim-initiatives', '~> 0.3.0', git: 'https://github.com/decidim/decidim-initiatives.git'
+gem 'decidim-initiatives', '~> 0.9.0.pre', git: 'https://github.com/decidim/decidim-initiatives.git'
 gem 'decidim-sortitions', '~> 0.2.0', git: 'https://github.com/decidim/decidim-module-sortitions.git'
 gem 'decidim-consultations', '~> 0.2.0', git: 'https://github.com/decidim/decidim-module-consultations.git'
 gem 'decidim-verifications'
