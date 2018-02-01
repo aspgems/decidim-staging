@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 65e4c9bbf80b043b2cb3573755f2883ed9cf7de2
+  revision: 1bfe3016d940e6e0af72cddd66bdac4092519b5a
   specs:
     decidim (0.9.0.pre)
       decidim-accountability (= 0.9.0.pre)
@@ -156,9 +156,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-consultations.git
-  revision: 857411b26591b688c68edf532f6b5739cca4b56c
+  revision: 18e3f2f74cc110b99a1aeb471291d0deebade790
   specs:
-    decidim-consultations (0.2.1)
+    decidim-consultations (0.2.2)
       decidim-admin (>= 0.9.0.pre, < 0.10.0)
       decidim-comments (>= 0.9.0.pre, < 0.10.0)
       decidim-core (>= 0.9.0.pre, < 0.10.0)
@@ -312,7 +312,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
-    devise-i18n (1.5.0)
+    devise-i18n (1.5.1)
       devise (>= 3.4)
     devise_invitable (1.7.2)
       actionmailer (>= 4.1.0)
@@ -401,7 +401,7 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.6.0)
       launchy (~> 2.2)
-    letter_opener_web (1.3.2)
+    letter_opener_web (1.3.3)
       actionmailer (>= 3.2)
       letter_opener (~> 1.0)
       railties (>= 3.2)
@@ -429,7 +429,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     nio4r (2.2.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     oauth (0.5.4)
     oauth2 (1.4.0)
@@ -476,7 +476,7 @@ GEM
       premailer (~> 1.7, >= 1.7.9)
     public_suffix (3.0.1)
     puma (3.11.2)
-    rack (2.0.3)
+    rack (2.0.4)
     rack-cors (1.0.2)
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
@@ -557,7 +557,7 @@ GEM
       rspec-expectations (~> 3.7.0)
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
-    rspec-support (3.7.0)
+    rspec-support (3.7.1)
     rubocop (0.52.1)
       parallel (~> 1.10)
       parser (>= 2.4.0.2, < 3.0)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180129104046) do
+ActiveRecord::Schema.define(version: 20180201064733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -209,12 +209,12 @@ ActiveRecord::Schema.define(version: 20180129104046) do
     t.jsonb "description", null: false
     t.string "banner_image"
     t.string "introductory_video_url"
-    t.date "start_voting_date", null: false
+    t.date "start_endorsing_date", null: false
     t.integer "decidim_highlighted_scope_id"
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "end_voting_date", null: false
+    t.date "end_endorsing_date", null: false
     t.boolean "enable_highlighted_banner", default: true, null: false
     t.index ["decidim_highlighted_scope_id"], name: "index_decidim_consultations_on_decidim_highlighted_scope_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_consultation_slug_and_organization", unique: true
@@ -223,6 +223,19 @@ ActiveRecord::Schema.define(version: 20180129104046) do
     t.index ["published_at"], name: "index_decidim_consultations_on_published_at"
     t.index ["subtitle"], name: "decidim_consultations_subtitle_search"
     t.index ["title"], name: "decidim_consultations_title_search"
+  end
+
+  create_table "decidim_consultations_endorsements", force: :cascade do |t|
+    t.bigint "decidim_consultation_question_id"
+    t.bigint "decidim_author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "decidim_user_group_id"
+    t.bigint "decidim_consultations_response_id"
+    t.index ["decidim_author_id"], name: "index_consultations_endorsements_on_author"
+    t.index ["decidim_consultation_question_id", "decidim_author_id", "decidim_user_group_id"], name: "index_question_votes_author_unique", unique: true
+    t.index ["decidim_consultation_question_id"], name: "index_consultations_endorsements_on_consultation_question"
+    t.index ["decidim_consultations_response_id"], name: "index_consultations_endorsements_on_consultations_response_id"
   end
 
   create_table "decidim_consultations_questions", force: :cascade do |t|
@@ -246,6 +259,10 @@ ActiveRecord::Schema.define(version: 20180129104046) do
     t.jsonb "origin_scope"
     t.jsonb "origin_title"
     t.string "origin_url"
+    t.integer "endorsements_count", default: 0, null: false
+    t.string "i_frame_url"
+    t.boolean "external_endorsement"
+    t.integer "responses_count", default: 0, null: false
     t.index ["decidim_consultation_id"], name: "index_consultations_questions_on_consultation_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_question_slug_and_organization", unique: true
     t.index ["decidim_scope_id"], name: "index_decidim_consultations_questions_on_decidim_scope_id"
@@ -258,6 +275,14 @@ ActiveRecord::Schema.define(version: 20180129104046) do
     t.index ["subtitle"], name: "consultation_questions_subtitle_search"
     t.index ["title"], name: "consultation_questions_title_search"
     t.index ["what_is_decided"], name: "consultation_questions_what_is_decided_search"
+  end
+
+  create_table "decidim_consultations_responses", force: :cascade do |t|
+    t.jsonb "title"
+    t.bigint "decidim_consultations_questions_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["decidim_consultations_questions_id"], name: "index_consultations_responses_on_consultation_questions"
   end
 
   create_table "decidim_debates_debates", id: :serial, force: :cascade do |t|
@@ -898,6 +923,8 @@ ActiveRecord::Schema.define(version: 20180129104046) do
 
   add_foreign_key "decidim_authorizations", "decidim_users"
   add_foreign_key "decidim_categorizations", "decidim_categories"
+  add_foreign_key "decidim_consultations_endorsements", "decidim_consultations_responses"
+  add_foreign_key "decidim_consultations_responses", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
