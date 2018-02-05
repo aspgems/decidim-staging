@@ -156,9 +156,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-consultations.git
-  revision: 18e3f2f74cc110b99a1aeb471291d0deebade790
+  revision: 2aa882f40be0cc17c3cae71f335efc025ad59c91
   specs:
-    decidim-consultations (0.2.2)
+    decidim-consultations (0.3.3)
       decidim-admin (>= 0.9.0.pre, < 0.10.0)
       decidim-comments (>= 0.9.0.pre, < 0.10.0)
       decidim-core (>= 0.9.0.pre, < 0.10.0)
@@ -353,7 +353,7 @@ GEM
       activesupport (>= 4.2.0)
     graphiql-rails (1.4.8)
       rails
-    graphql (1.7.8)
+    graphql (1.7.9)
     hashdiff (0.3.7)
     hashie (3.5.7)
     high_voltage (3.0.0)
@@ -625,7 +625,7 @@ GEM
     truncato (0.7.10)
       htmlentities (~> 4.3.1)
       nokogiri (~> 1.8.0, >= 1.7.0)
-    tzinfo (1.2.4)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.5)
       execjs (>= 0.3.0, < 3)
@@ -675,7 +675,7 @@ DEPENDENCIES
   capistrano-rails
   chamber (~> 2.10.1)
   decidim!
-  decidim-consultations (~> 0.2.0)!
+  decidim-consultations (~> 0.3.0)!
   decidim-dev (>= 0.9.0.pre, < 0.10.0)
   decidim-initiatives (~> 0.9.0.pre)!
   decidim-sortitions (~> 0.2.0)!
