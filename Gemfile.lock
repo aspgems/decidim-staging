@@ -156,9 +156,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-consultations.git
-  revision: 2aa882f40be0cc17c3cae71f335efc025ad59c91
+  revision: 0e5a26db3451a7ba4be012779a792099744575b5
   specs:
-    decidim-consultations (0.3.3)
+    decidim-consultations (0.3.4)
       decidim-admin (>= 0.9.0.pre, < 0.10.0)
       decidim-comments (>= 0.9.0.pre, < 0.10.0)
       decidim-core (>= 0.9.0.pre, < 0.10.0)
@@ -334,7 +334,7 @@ GEM
       i18n (>= 0.7)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.18)
+    ffi (1.9.21)
     file_validators (2.1.0)
       activemodel (>= 3.0)
       mime-types (>= 1.0)
@@ -513,7 +513,7 @@ GEM
     rainbow (2.2.2)
       rake
     rake (12.3.0)
-    ransack (1.8.6)
+    ransack (1.8.7)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       activesupport (>= 3.0)
@@ -676,6 +676,7 @@ DEPENDENCIES
   chamber (~> 2.10.1)
   decidim!
   decidim-consultations (~> 0.3.0)!
+  decidim-debates
   decidim-dev (>= 0.9.0.pre, < 0.10.0)
   decidim-initiatives (~> 0.9.0.pre)!
   decidim-sortitions (~> 0.2.0)!

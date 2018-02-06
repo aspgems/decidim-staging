@@ -9,6 +9,7 @@ gem 'decidim-initiatives', '~> 0.9.0.pre', git: 'https://github.com/decidim/deci
 gem 'decidim-sortitions', '~> 0.2.0', git: 'https://github.com/decidim/decidim-module-sortitions.git'
 gem 'decidim-consultations', '~> 0.3.0', git: 'https://github.com/decidim/decidim-module-consultations.git'
 gem 'decidim-verifications'
+gem 'decidim-debates'
 
 gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
