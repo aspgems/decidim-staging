@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 
 gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
-gem 'decidim', git: "https://github.com/decidim/decidim"
-gem 'decidim-initiatives', '~> 0.9.0.pre', git: 'https://github.com/decidim/decidim-initiatives.git'
+gem 'decidim', '~> 0.9.0'
+gem 'decidim-initiatives', '~> 0.9.0', git: 'https://github.com/decidim/decidim-initiatives.git'
 gem 'decidim-sortitions', '~> 0.2.0', git: 'https://github.com/decidim/decidim-module-sortitions.git'
 gem 'decidim-consultations', '~> 0.3.0', git: 'https://github.com/decidim/decidim-module-consultations.git'
 gem 'decidim-verifications'
@@ -19,7 +19,7 @@ gem 'faker', '~> 1.8.4'
 group :development, :test do
   gem 'byebug', platform: :mri
 
-  gem 'decidim-dev', '>= 0.9.0.pre', '< 0.10.0'
+  gem 'decidim-dev', '~> 0.9.0'
 end
 
 group :development do
