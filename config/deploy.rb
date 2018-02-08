@@ -9,7 +9,7 @@ set :deploy_to, -> { "/home/#{fetch(:user)}/app" }
 set :keep_releases, 5
 
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/chamber.pem')
-set :linked_dirs,  fetch(:linked_dirs,  []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+set :linked_dirs,  fetch(:linked_dirs,  []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 # Files that won't be copied from script/deploy/{branch}/ into the root directory
 set :exclude_deployment_files, []
