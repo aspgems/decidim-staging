@@ -16,9 +16,9 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim-module-consultations.git
-  revision: 6dd420d47081282c1904171e96a90916f98e533e
+  revision: 9f1fccf4db3fd2b56f3f014f966f596aec894f59
   specs:
-    decidim-consultations (0.3.8)
+    decidim-consultations (0.3.12)
       decidim-admin (~> 0.9.0)
       decidim-comments (~> 0.9.0)
       decidim-core (~> 0.9.0)
@@ -356,7 +356,7 @@ GEM
     htmlentities (4.3.4)
     httparty (0.15.7)
       multi_xml (>= 0.5.2)
-    i18n (0.9.3)
+    i18n (0.9.4)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.20)
       activesupport (>= 4.0.2)
@@ -622,7 +622,7 @@ GEM
       nokogiri (~> 1.8.0, >= 1.7.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.5)
+    uglifier (4.1.6)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.3.0)
     url (0.3.2)
