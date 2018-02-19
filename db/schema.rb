@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212104207) do
+ActiveRecord::Schema.define(version: 20180219105142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -250,6 +250,7 @@ ActiveRecord::Schema.define(version: 20180212104207) do
     t.boolean "external_voting"
     t.integer "responses_count", default: 0, null: false
     t.string "hero_image"
+    t.integer "order"
     t.index ["decidim_consultation_id"], name: "index_consultations_questions_on_consultation_id"
     t.index ["decidim_organization_id", "slug"], name: "index_unique_question_slug_and_organization", unique: true
     t.index ["decidim_scope_id"], name: "index_decidim_consultations_questions_on_decidim_scope_id"
