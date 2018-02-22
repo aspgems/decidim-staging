@@ -18,7 +18,7 @@ set :ssh_options, -> {
   {
       user: fetch(:user),
       forward_agent: true,
-      compression: 'none',
+      compression: 'none'
   }
 }
 
@@ -41,9 +41,9 @@ namespace :deploy do
   desc 'Create chamber.pem symlink'
   task :create_symlink do
     on roles(:app) do
-      execute 'ln -s config/chamber.pem .chamber.pem'
+      execute "ln -s #{shared_path}/config/chamber.pem #{latest_release}/.chamber.pem"
     end
   end
 end
 
-before :deploy, 'deploy:create_symlink'
+after 'deploy:update_code', 'deploy:create_symlink'
