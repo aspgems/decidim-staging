@@ -41,7 +41,8 @@ namespace :deploy do
   desc 'Create chamber.pem symlink'
   task :create_symlink do
     on roles(:app) do
-      execute "ln -s #{shared_path}/config/chamber.pem #{latest_release}/.chamber.pem"
+      # Asegurar que shared path y latest release tienen valor/existen
+      execute "ln -s #{shared_path}/config/chamber.pem #{current_release}/.chamber.pem"
     end
   end
 end
