@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# Load application settings into the ::Settings class. See https://github.com/m5rk/chamber for details
+# Load application settings into the ::Settings class.
+# See https://github.com/m5rk/chamber for details
 class Settings
   extend Chamber
 
@@ -12,4 +13,3 @@ class Settings
     super
   end
 end
-
