@@ -33,6 +33,17 @@ set :db_local_clean, true
 # This directory must be in your shared directory on the server
 set :assets_dir, %w(public/assets)
 # if you want to work on a specific local environment (default = ENV['RAILS_ENV'] || 'development')
-set :locals_rails_env, "development"
+set :locals_rails_env, 'development'
 
 set :passenger_restart_with_touch, true
+
+namespace :deploy do
+  desc 'Create chamber.pem symlink'
+  task :create_symlink do
+    on roles(:app) do
+      execute 'ln -s config/chamber.pem .chamber.pem'
+    end
+  end
+end
+
+before :deploy, 'deploy:create_symlink'

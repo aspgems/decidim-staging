@@ -10,11 +10,6 @@ Bundler.require(*Rails.groups)
 
 module DevelopmentApp
   class Application < Rails::Application
-    config.before_configuration do
-      # Load settings
-      require_relative 'initializers/0_settings'
-    end
-
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
