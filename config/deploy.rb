@@ -46,4 +46,4 @@ namespace :deploy do
   end
 end
 
-before 'deploy:publishing', 'deploy:create_symlink'
+after 'bundler:install', 'deploy:create_symlink'
